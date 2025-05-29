@@ -1,13 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ccdbe7; /* Azul padrão do Windows 10 */
-    margin: 0;
+    background: #10067a;
+    background: linear-gradient(90deg, rgba(16, 6, 122, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: rgb(102, 184, 231);
+    background-color: transparent;
+    color: inherit;
+    /* mantém a cor herdada */
+    border: none;
+    /* sem bordas visíveis */
     padding: 20px;
     text-align: center;
 }
@@ -23,7 +26,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: rgb(103, 172, 236);
+    color: rgb(194, 222, 248);
     text-decoration: none;
 }
 
@@ -36,6 +39,7 @@ section {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 footer {
@@ -57,47 +61,74 @@ img {
 
 /* Neon Azul Animado */
 @keyframes neonAzulRGB {
-  0%, 100% {
-    text-shadow:
-      0 0 5px rgb(0, 255, 255),
-      0 0 10px rgb(0, 255, 255),
-      0 0 20px rgb(0, 255, 255),
-      0 0 40px rgb(0, 255, 255);
-  }
-  50% {
-    text-shadow:
-      0 0 2px rgb(0, 128, 128),
-      0 0 5px rgb(0, 255, 255),
-      0 0 10px rgb(0, 255, 255),
-      0 0 20px rgb(0, 255, 255);
-  }
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 5px rgb(0, 255, 255),
+            0 0 10px rgb(0, 255, 255),
+            0 0 20px rgb(0, 255, 255),
+            0 0 40px rgb(0, 255, 255);
+    }
+
+    50% {
+        text-shadow:
+            0 0 2px rgb(0, 128, 128),
+            0 0 5px rgb(0, 255, 255),
+            0 0 10px rgb(0, 255, 255),
+            0 0 20px rgb(0, 255, 255);
+    }
 }
 
 .neon {
-  color: rgb(0, 255, 255);
-  animation: neonAzulRGB 1.8s ease-in-out infinite;
+    color: rgb(0, 255, 255);
+    animation: neonAzulRGB 1.8s ease-in-out infinite;
 }
 
 @keyframes neonRosaRGB {
-  0%, 100% {
-    text-shadow:
-      0 0 5px rgb(255, 0, 255),
-      0 0 10px rgb(255, 0, 255),
-      0 0 20px rgb(255, 0, 255),
-      0 0 40px rgb(255, 0, 255);
-  }
-  50% {
-    text-shadow:
-      0 0 2px rgb(128, 0, 128),
-      0 0 5px rgb(200, 0, 200),
-      0 0 10px rgb(255, 0, 255),
-      0 0 20px rgb(255, 0, 255);
-  }
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 5px rgb(255, 0, 255),
+            0 0 10px rgb(255, 0, 255),
+            0 0 20px rgb(255, 0, 255),
+            0 0 40px rgb(255, 0, 255);
+    }
+
+    50% {
+        text-shadow:
+            0 0 2px rgb(128, 0, 128),
+            0 0 5px rgb(200, 0, 200),
+            0 0 10px rgb(255, 0, 255),
+            0 0 20px rgb(255, 0, 255);
+    }
 }
 
 .neon-title {
-  color: rgb(255, 0, 255);
-  animation: neonRosaRGB 1.8s ease-in-out infinite;
+    color: rgb(255, 0, 255);
+    animation: neonRosaRGB 1.8s ease-in-out infinite;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/*
+.receita {
+background :  ---; fundo
+border-radius: 10px ; ---  redondamento das bordas
+padding: 15px;  ---espaçamento
+width: 250pix; -- largura
+display: flex; 
+align-ítems: center;
+flex-direction: column;  
+box-shadow: sombra;
+  (google - boxcssscan   css gradient)
+
+
+
+}
+
+
+
+
+*/
