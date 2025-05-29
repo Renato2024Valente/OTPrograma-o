@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página com Animações</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000814;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .foto {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff60;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .foto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #00ffff;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .container {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🌠 OT Programação</h1>
+    <div class="row g-4">
+      <div class="col-md-4 fade-in"><img src="oT.jpeg" class="foto w-100" alt="OT Programação"></div>
+      <div class="col-md-4 fade-in"><img src="ot2.jpeg" class="foto w-100" alt="OT Programação"></div>
+      <div class="col-md-4 fade-in"><img src="ot3.jpeg" class="foto w-100" alt="OT Programação"></div>
+    </div>
+  </div>
+   <div class="container">
+    <h1>🌠 Avatar</h1>
+    <div class="row g-4">
+      <div class="col-md-4 fade-in"><img src="1cartoon.png" class="foto w-100" alt="Avatar"></div>
+      <div class="col-md-4 fade-in"><img src="cartoon2 (1).png" class="foto w-100" alt="Avatar"></div>
+      <div class="col-md-4 fade-in"><img src="cartoon2 (2).png" class="foto w-100" alt="Avatar"></div>
+    </div>
+  </div>
+<hr class="my-5">
+
+<div class="container">
+  <h2 class="text-center mb-4">💬 Comentários</h2>
+  
+  <div class="card bg-dark text-white mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Agnaldo</h5>
+      <p class="card-text">Parabens Otimo trabalho da Programação 👏</p>
+    </div>
+  </div>
+
+  <div class="card bg-dark text-white mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Thiado</h5>
+      <p class="card-text">Parabens sucesso nessa OT! 🧠</p>
+      <p class="card-text">Sucesso sempre! 🧠</p>
+    </div>
+  </div>
+
+  <!-- Formulário para adicionar novo comentário -->
+  <div class="card bg-secondary text-white">
+    <div class="card-header">Adicionar comentário</div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome:</label>
+          <input type="text" class="form-control" id="nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="comentario" class="form-label">Comentário:</label>
+          <textarea class="form-control" id="comentario" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-info">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <script>
+    // Efeito de fade-in ao rolar
+    const observers = document.querySelectorAll('.fade-in');
+    const ativar = () => {
+      observers.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', ativar);
+    window.addEventListener('load', ativar);
+  </script>
+  <footer class="bg-dark text-center text-white mt-5 p-3">
+  <p>&copy; 2025 OT Bootstrap – Criado por Renato</p>
+</footer>
+
+</body>
+</html>
